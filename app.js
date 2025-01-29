@@ -26,5 +26,5 @@ app.listen(PORT, () => {
 /* This is supposed to be a "catch-all" middleware */
 app.use((err, req, res, next) => {
   console.error(err);
-  res.status(500).send(err);
+  res.status(err.statusCode || 500).send(`<h2>${err.message}</h2>`);
 });
