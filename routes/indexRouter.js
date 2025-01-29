@@ -2,9 +2,9 @@ const { Router } = require("express");
 
 const indexRouter = Router();
 
-indexRouter.get("/", (req, res) =>
-  res.send("General information, about, and contact")
-);
+indexRouter.get("/", (req, res) => {
+  res.send("General information, about, and contact");
+});
 
 indexRouter.get("/about", (req, res) => {
   res.send("About us");
